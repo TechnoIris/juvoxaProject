@@ -1,0 +1,23 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styler.css') }}">
+  <title>Register</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <p>{{message}}</p>
+  <div class="register" style="background-color:blue;">
+  <form method="post" action="/director/">
+    <input type="text" name="Name" placeholder="Name"><br><br>
+    <select name="Type">
+      <option value="hospital">Hospital</option>
+      <option value="doctor">Doctor</option>
+      <option value="patient">Patient</option>
+    </select><br><br>
+    <input type="password" name="passphrase" placeholder="PassPhrase"><br><br>
+    <button name="Submit" type="submit">Login</button>
+    </form>
+  </div>
+  </body>
+  </html>

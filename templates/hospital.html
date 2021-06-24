@@ -1,0 +1,76 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styler.css') }}">
+  <title>Doctor Portal</title>
+  <style>
+  .list {
+    margin-left: 30%;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  th {
+    width: 500px;
+    background-color: yellow;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+  }
+  .consult {
+    padding-top: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    bottom: 40px;
+    right: 40px;
+    position: fixed;
+  }
+  .home {
+    padding-top: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    align-items: center;
+    background-color: black;
+    color: white;
+    top: 40px;
+    left: 40px;
+    position: fixed;
+  }
+  h2 {
+    text-transform: uppercase;
+  }
+  h3 {
+    text-transform: uppercase;
+  }
+  </style>
+</head>
+<body>
+  <a href="/login/"><div class="home">Home</div></a>
+  <h1>Hospital Portal</h1>
+  <h2>{{message}}</h2>
+  <hr>
+  <h3>Working Doctors</h3>
+  <div class="list">
+  <table border = 1>
+    <tr>
+      <th>Doctors Recruited</th>
+    </tr>
+    {% for i in data %}
+    <tr>
+       <th>{{ i[0] }} </th>
+    </tr>
+    {% endfor %}
+ </table>
+</div>
+<a href="#"><div class="consult">Recruit Doctor</div></a>
+</body>
+</html>
