@@ -2,6 +2,7 @@
 A hospital portal
 
 This app provides a online interaction and helps keep track and fetching of records for the hospital, doctor and patient end user.
+It requires flask python package library and much others. If preffered to run on virtual python environment follow the last procedure described as venv setup within main folder.
 Please follow the instructions as follows.,
 
 1.create a database called hospital in psql.
@@ -22,3 +23,10 @@ flask db init
 flask db migrate
 flask db upgrade
 flask run
+
+venv setup:
+  cd to the main folder: here juvoxaProject
+  mkdir python-virtual-environments && cd python-virtual-environments
+  python3 -m venv env
+  source env/bin/activate
+  python3 -m pip install requirements.txt
