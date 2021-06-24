@@ -18,7 +18,7 @@ grant psql to <username>;
 i. provide postgresql details for SQLALCHEMY_DATABASE_URI in main.py file in the format "postgresql://<db_username>:<password>@localhost:5432/hospital"
 
 5.Finally run these cmds in terminal.,
-export FLASK_APP=main
+export FLASK_APP=main     or export FLASK_APP = manage
 flask db init
 flask db migrate
 flask db upgrade
